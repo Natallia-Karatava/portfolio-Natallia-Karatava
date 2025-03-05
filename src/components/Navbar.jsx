@@ -22,7 +22,10 @@ const Navbar = () => {
               </a>
             </li>
             <li>
-              <a href="#" className="hover:text-red-600 transition-colors">
+              <a
+                href="#skills"
+                className="hover:text-red-600 transition-colors"
+              >
                 Skills
               </a>
             </li>
