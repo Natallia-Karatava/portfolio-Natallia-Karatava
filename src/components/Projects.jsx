@@ -5,28 +5,34 @@ const Carousel = () => {
   const projects = [
     {
       name: "Simple page - just HTML and CSS",
-      image: "src/images/simple-page-only-html-css.png",
+      image: "src/images/projects-img/simple-page-html-css.png",
       url: "https://github.com/Natallia-Karatava/landing-page-projeckt?tab=readme-ov-file",
     },
     {
-      name: "Project 2",
-      image: "src/images/simple-page-only-html-css.png",
-      url: "https://project2.com",
+      name: "Website for the artist",
+      image: "src/images/projects-img/website-for-the-artist.png",
+      url: "https://helena-klaus.de/galerie/",
     },
     {
-      name: "Project 3",
-      image: "src/images/simple-page-only-html-css.png",
-      url: "https://project3.com",
+      name: "Guess the color game!",
+      image: "src/images/projects-img/game-guess-the-color.png",
+      url: "https://github.com/Natallia-Karatava/game-Guess-the-color",
+    },
+
+    {
+      name: "Website for an IT company",
+      image: "src/images/projects-img/website-for-an-it-company.png",
+      url: "https://visutechsystem.by/en/",
     },
     {
-      name: "Project 4",
-      image: "src/images/simple-page-only-html-css.png",
-      url: "https://project4.com",
+      name: "Website concepts for a museum",
+      image: "src/images/projects-img/website-for-an-it-company.png",
+      url: "https://www.behance.net/gallery/134427745/koncept-sajta-dlja-muzeja-abstrakcionizma",
     },
     {
-      name: "Project 5",
-      image: "src/images/simple-page-only-html-css.png",
-      url: "https://project5.com",
+      name: "App for event search - design",
+      image: "src/images/projects-img/website-for-an-it-company.png",
+      url: "https://www.behance.net/gallery/134278605/koncept-mobilnogo-prilozhenija-dlja-poiska-sobytij",
     },
   ];
 
@@ -86,7 +92,9 @@ const Carousel = () => {
               <div
                 key={index}
                 className={`flex-shrink-0 transition-transform duration-500 ease-out ${
-                  index === 1 ? "scale-100 opacity-100" : "scale-90 opacity-50"
+                  index === 1
+                    ? "scale-100 opacity-100"
+                    : "scale-90 opacity-50 blur-s"
                 } w-11/12 sm:w-9/12 md:w-1/3`}
                 style={{
                   transform:
@@ -112,7 +120,7 @@ const Carousel = () => {
                       href={project.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="mt-2 inline-block text-gray-800 py-2 px-2 hover:text-red-600 transition duration-300"
+                      className="mt-2 inline-block text-gray-800  px-2 hover:text-red-600 transition duration-300"
                     >
                       Go to view
                     </a>

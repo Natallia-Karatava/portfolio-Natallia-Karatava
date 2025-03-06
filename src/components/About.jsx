@@ -37,17 +37,23 @@ const About = () => {
             <a
               href="https://github.com/Natallia-Karatava"
               className="text-gray-800 text-2xl md:text-3xl hover:text-red-600"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <FaGithub />
             </a>
             <a
               href="https://www.linkedin.com/in/natallia-karatava"
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-gray-800 text-2xl md:text-3xl hover:text-red-600"
             >
               <FaLinkedin />
             </a>
             <a
               href="https://www.behance.net/natalliakaratava"
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-gray-800 text-2xl md:text-3xl hover:text-red-600"
             >
               <FaBehance />
