@@ -17,7 +17,7 @@ const Navbar = () => {
           {/* <!-- Navigation Links --> */}
           <ul className="hidden md:flex space-x-6 text-gray-800 font-medium">
             <li>
-              <a href="#" className="hover:text-red-600 transition-colors">
+              <a href="#about" className="hover:text-red-600 transition-colors">
                 About
               </a>
             </li>
@@ -30,7 +30,10 @@ const Navbar = () => {
               </a>
             </li>
             <li>
-              <a href="#" className="hover:text-red-600 transition-colors">
+              <a
+                href="#projects"
+                className="hover:text-red-600 transition-colors"
+              >
                 Projects
               </a>
             </li>
