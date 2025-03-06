@@ -1,6 +1,5 @@
 import "./App.css";
 import About from "./components/About";
-import Carousel from "./components/Carousel";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Projects from "./components/Projects";
@@ -12,7 +11,6 @@ function App() {
       <About />
       <Skills />
       <Projects />
-      <Carousel />
       <Footer />
     </>
   );

@@ -1,122 +1,138 @@
 import React, { useState } from "react";
-import { FaArrowLeft, FaArrowRight, FaExternalLinkAlt } from "react-icons/fa";
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
-const projects = [
-  {
-    id: 1,
-    image: "src/images/simple-page-only-html-css.png",
-    title: "Simple page - just HTML and CSS",
-    link: "https://github.com/Natallia-Karatava/landing-page-projeckt?tab=readme-ov-file",
-  },
-  {
-    id: 2,
-    image: "src/images/simple-page-only-html-css.png",
-    title: "Simple page - just HTML and CSS",
-    link: "https://github.com/Natallia-Karatava/landing-page-projeckt?tab=readme-ov-file",
-  },
-  {
-    id: 3,
-    image: "src/images/simple-page-only-html-css.png",
-    title: "Simple page - just HTML and CSS",
-    link: "https://github.com/Natallia-Karatava/landing-page-projeckt?tab=readme-ov-file",
-  },
-  {
-    id: 4,
-    image: "src/images/simple-page-only-html-css.png",
-    title: "Simple page - just HTML and CSS",
-    link: "https://github.com/Natallia-Karatava/landing-page-projeckt?tab=readme-ov-file",
-  },
-  {
-    id: 5,
-    image: "src/images/simple-page-only-html-css.png",
-    title: "Simple page - just HTML and CSS",
-    link: "https://github.com/Natallia-Karatava/landing-page-projeckt?tab=readme-ov-file",
-  },
-];
+const Carousel = () => {
+  const projects = [
+    {
+      name: "Simple page - just HTML and CSS",
+      image: "src/images/simple-page-only-html-css.png",
+      url: "https://github.com/Natallia-Karatava/landing-page-projeckt?tab=readme-ov-file",
+    },
+    {
+      name: "Project 2",
+      image: "src/images/simple-page-only-html-css.png",
+      url: "https://project2.com",
+    },
+    {
+      name: "Project 3",
+      image: "src/images/simple-page-only-html-css.png",
+      url: "https://project3.com",
+    },
+    {
+      name: "Project 4",
+      image: "src/images/simple-page-only-html-css.png",
+      url: "https://project4.com",
+    },
+    {
+      name: "Project 5",
+      image: "src/images/simple-page-only-html-css.png",
+      url: "https://project5.com",
+    },
+  ];
 
-const Projects = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const prevSlide = () => {
+  const handleNext = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === projects.length - 1 ? 0 : prevIndex + 1
+    );
+  };
+
+  const handlePrev = () => {
     setCurrentIndex((prevIndex) =>
       prevIndex === 0 ? projects.length - 1 : prevIndex - 1
     );
   };
 
-  const nextSlide = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === projects.length - 1 ? 0 : prevIndex + 1
-    );
+  const getVisibleProjects = () => {
+    if (currentIndex === 0) {
+      return [
+        projects[projects.length - 1],
+        projects[currentIndex],
+        projects[currentIndex + 1],
+      ];
+    }
+    if (currentIndex === projects.length - 1) {
+      return [projects[currentIndex - 1], projects[currentIndex], projects[0]];
+    }
+    return [
+      projects[currentIndex - 1],
+      projects[currentIndex],
+      projects[currentIndex + 1],
+    ];
   };
+
+  const visibleProjects = getVisibleProjects();
 
   return (
     <section
       id="projects"
       className="bg-white text-gray-800 py-16 px-8 relative"
     >
-      <h2 className="text-4xl font-semibold text-center mb-8">My Projects</h2>
-      <div className="relative max-w-6xl mx-auto flex items-center justify-center overflow-hidden">
-        {/* Prev Button */}
-        <button
-          onClick={prevSlide}
-          className="absolute left-4 bg-gray-800 bg-opacity-50 p-3 rounded-full text-white hover:bg-opacity-80 transition top-1/2 transform -translate-y-1/2"
-        >
-          <FaArrowLeft size={24} />
-        </button>
+      <div className="relative w-full overflow-visible">
+        <h2 className="text-4xl font-semibold text-center mb-8">My Projects</h2>
+        <div className="relative max-w-6xl mx-auto flex items-center justify-center overflow-visible">
+          {/* Кнопка влево */}
+          <button
+            onClick={handlePrev}
+            className="absolute left-0 z-10 text-white bg-gray-800 hover:bg-red-600 hover:text-gray-800 p-3 rounded-full m-10"
+          >
+            <FaArrowLeft size={24} />
+          </button>
 
-        {/* Проекты */}
-        <div className="flex w-full justify-center items-center gap-6 overflow-hidden">
-          {projects.map((project, index) => {
-            const isActive = index === currentIndex;
-            const isNext = index === (currentIndex + 1) % projects.length;
-            const isPrev =
-              index === (currentIndex - 1 + projects.length) % projects.length;
-
-            return (
+          {/* Контейнер с карточками */}
+          <div className="flex w-full justify-around items-center gap-2 sm:gap-4 md:gap-6">
+            {visibleProjects.map((project, index) => (
               <div
-                key={project.id}
-                className={`relative transition-all duration-500 w-[400px] h-[250px] flex-shrink-0 ${
-                  isActive
-                    ? "opacity-100 transform scale-100"
-                    : isNext
-                    ? "opacity-60 transform translate-x-10"
-                    : isPrev
-                    ? "opacity-60 transform -translate-x-10"
-                    : "opacity-40 transform scale-90"
-                }`}
+                key={index}
+                className={`flex-shrink-0 transition-transform duration-500 ease-out ${
+                  index === 1 ? "scale-100 opacity-100" : "scale-90 opacity-50"
+                } w-11/12 sm:w-9/12 md:w-1/3`}
+                style={{
+                  transform:
+                    index === 0
+                      ? "translateX(0%)"
+                      : index === 2
+                      ? "translateX(0%)"
+                      : "translateX(0)",
+                }}
               >
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-full object-cover rounded-lg shadow-lg"
-                />
-                <h3 className="mt-4 text-lg font-medium text-center">
-                  {project.title}
-                </h3>
-                {/* Go Button */}
-                <div className="flex justify-center mt-2">
-                  <a
-                    href={project.link}
-                    className="flex items-center gap-2 text-gray-800 text-lg hover:text-red-600 transition"
-                  >
-                    Go <FaExternalLinkAlt />
-                  </a>
+                <div className="rounded-lg overflow-hidden shadow-lg">
+                  {/* Верхняя часть карточки — фон с изображением */}
+                  <div
+                    className="min-h-[15rem] bg-cover bg-center"
+                    style={{ backgroundImage: `url(${project.image})` }}
+                  ></div>
+                  {/* Нижняя белая плашка */}
+                  <div className="bg-white p-4">
+                    <h3 className="text-lg font-semibold text-gray-800 ml-2">
+                      {project.name}
+                    </h3>
+                    <a
+                      href={project.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="mt-2 inline-block text-gray-800 py-2 px-2 hover:text-red-600 transition duration-300"
+                    >
+                      Go to view
+                    </a>
+                  </div>
                 </div>
               </div>
-            );
-          })}
-        </div>
+            ))}
+          </div>
 
-        {/* Next Button */}
-        <button
-          onClick={nextSlide}
-          className="absolute right-4 bg-gray-800 bg-opacity-50 p-3 rounded-full text-white hover:bg-opacity-80 transition top-1/2 transform -translate-y-1/2"
-        >
-          <FaArrowRight size={24} />
-        </button>
+          {/* Кнопка вправо */}
+          <button
+            onClick={handleNext}
+            className="absolute right-0 z-10 text-white bg-gray-800 p-3 hover:bg-red-600 hover:text-gray-800 rounded-full m-10"
+          >
+            <FaArrowRight size={24} />
+          </button>
+        </div>
       </div>
     </section>
   );
 };
 
-export default Projects;
+export default Carousel;
