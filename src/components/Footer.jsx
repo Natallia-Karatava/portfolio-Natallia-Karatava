@@ -14,21 +14,21 @@ const Footer = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <FaGithub style={{ width: "24px", height: "24px" }} />
+          <FaGithub className="text-3xl hover:text-red-600" />
         </a>
         <a
           href="https://www.linkedin.com/in/natallia-karatava-56247a186?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <FaLinkedin style={{ width: "24px", height: "24px" }} />
+          <FaLinkedin className="text-3xl hover:text-red-600" />
         </a>
         <a
           href="https://www.behance.net/natalliakaratava"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <FaBehance style={{ width: "24px", height: "24px" }} />
+          <FaBehance className="text-3xl hover:text-red-600" />
         </a>
       </nav>
     </footer>

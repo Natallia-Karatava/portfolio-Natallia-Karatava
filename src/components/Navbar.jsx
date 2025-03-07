@@ -1,6 +1,4 @@
 import { useState } from "react";
-import { AiOutlineMenu } from "react-icons/ai";
-import { LiaBuromobelexperte } from "react-icons/lia";
 import { FaBuromobelexperte } from "react-icons/fa6";
 
 const Navbar = () => {
@@ -74,11 +72,10 @@ const Navbar = () => {
           {/* <!-- Mobile Menu Button --> */}
           <button
             id="menu-btn"
-            onClick={toggleMenu} // Обработчик для открытия/закрытия меню
-            className="md:hidden flex items-center text-gray-800"
+            onClick={toggleMenu}
+            className="md:hidden flex items-center ml-auto text-gray-800"
           >
-            <FaBuromobelexperte className="w-7 h-7" />{" "}
-            {/* Используем иконку из react-icons */}
+            <FaBuromobelexperte className="w-7 h-7" />
           </button>
         </div>
 
@@ -89,9 +86,8 @@ const Navbar = () => {
             isMenuOpen ? "block" : "hidden"
           } bg-white shadow-md`}
         >
-          <ul className="space-y-4 p-4 text-gray-800 font-medium text-left">
-            {" "}
-            {/* Ссылки слева */}
+          <ul className="space-y-4 p-4 text-gray-800 font-medium text-right">
+            {/* Ссылки в мобильном меню */}
             <li>
               <a
                 href="#about"
