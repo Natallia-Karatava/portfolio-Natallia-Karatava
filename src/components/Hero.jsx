@@ -5,11 +5,17 @@ const Hero = () => {
   return (
     <div className="relative hero bg-white min-h-screen flex items-center justify-center overflow-hidden">
       <div className="hero-content flex-col lg:flex-row-reverse lg:gap-32 w-full max-w-7xl px-6">
-        <img
-          src="src/images/NK-foto.png"
-          className="w-full max-w-md lg:max-w-lg h-auto rounded-lg"
-          alt="Natallia"
-        />
+        <div>
+          <img
+            src="src/images/NK-foto.png"
+            className="w-full max-w-md lg:max-w-lg h-auto rounded-lg"
+            alt="Natallia"
+          />
+          <div className="hidden md:block absolute top-122 right-18 -translate-x-1/2 z-10  pointer-events-none">
+            <RedDotsGrid />
+          </div>
+        </div>
+
         <div className="text-center lg:text-left">
           <h1 className="text-gray-800 text-5xl font-bold pb-4">
             Hi, I'm Natallia
