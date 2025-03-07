@@ -73,7 +73,7 @@ const Carousel = () => {
   return (
     <section
       id="projects"
-      className="bg-white text-gray-800 py-16 px-8 relative scroll-mt-16"
+      className="bg-white text-gray-800 pt-10 pb-14 px-8 relative scroll-mt-16"
     >
       <div className="relative w-full overflow-visible">
         <h2 className="text-4xl font-semibold text-center mb-8">My Projects</h2>

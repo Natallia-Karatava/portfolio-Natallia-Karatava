@@ -1,4 +1,11 @@
+import { useState } from "react";
+import { AiOutlineMenu } from "react-icons/ai";
+import { LiaBuromobelexperte } from "react-icons/lia";
+import { FaBuromobelexperte } from "react-icons/fa6";
+
 const Navbar = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false); // Состояние для управления видимостью меню
+
   const handleScroll = (e, id) => {
     e.preventDefault();
     document.getElementById(id)?.scrollIntoView({
@@ -6,13 +13,15 @@ const Navbar = () => {
       block: "start",
     });
   };
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
     <div>
-      <nav
-        id="navbar"
-        className=" fixed w-full bg-white/80 backdrop-blur-md shadow-md transition-transform duration-300 transform-gpu z-50"
-      >
-        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+      <nav className="fixed w-full bg-white/80 backdrop-blur-md shadow-md transition-transform duration-300 transform-gpu z-50">
+        <div className="container mx-auto px-6 py-4 flex justify-between items-center">
           {/* <!-- Logo --> */}
           <a
             href="#"
@@ -65,31 +74,28 @@ const Navbar = () => {
           {/* <!-- Mobile Menu Button --> */}
           <button
             id="menu-btn"
+            onClick={toggleMenu} // Обработчик для открытия/закрытия меню
             className="md:hidden flex items-center text-gray-800"
           >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="2"
-              stroke="currentColor"
-              class="w-6 h-6"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M4 6h16M4 12h16m-7 6h7"
-              />
-            </svg>
+            <FaBuromobelexperte className="w-7 h-7" />{" "}
+            {/* Используем иконку из react-icons */}
           </button>
         </div>
-        {/* 
-    <!-- Mobile Menu --> */}
-        <div id="mobile-menu" className="hidden bg-white md:hidden shadow-md">
-          <ul className="space-y-4 p-4 text-gray-800 font-medium">
+
+        {/* <!-- Mobile Menu --> */}
+        <div
+          id="mobile-menu"
+          className={`md:hidden ${
+            isMenuOpen ? "block" : "hidden"
+          } bg-white shadow-md`}
+        >
+          <ul className="space-y-4 p-4 text-gray-800 font-medium text-left">
+            {" "}
+            {/* Ссылки слева */}
             <li>
               <a
-                href="about"
+                href="#about"
+                onClick={(e) => handleScroll(e, "about")}
                 className="block hover:text-red-500 transition-colors"
               >
                 About
@@ -97,7 +103,8 @@ const Navbar = () => {
             </li>
             <li>
               <a
-                href="skills"
+                href="#skills"
+                onClick={(e) => handleScroll(e, "skills")}
                 className="block hover:text-red-500 transition-colors"
               >
                 Skills
@@ -105,7 +112,8 @@ const Navbar = () => {
             </li>
             <li>
               <a
-                href="projects"
+                href="#projects"
+                onClick={(e) => handleScroll(e, "projects")}
                 className="block hover:text-red-500 transition-colors"
               >
                 Projects
@@ -113,7 +121,8 @@ const Navbar = () => {
             </li>
             <li>
               <a
-                href="contact"
+                href="#contact"
+                onClick={(e) => handleScroll(e, "contact")}
                 className="block hover:text-red-500 transition-colors"
               >
                 Contact
@@ -125,4 +134,5 @@ const Navbar = () => {
     </div>
   );
 };
+
 export default Navbar;

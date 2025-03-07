@@ -17,7 +17,7 @@ const Hero = () => {
           </h2>
           <a
             href="mailto:nkaratova@gmail.com"
-            className="bg-gray-800 text-white hover:bg-red-600 hover:text-gray-800 px-6 py-4 rounded text-lg"
+            className="bg-gray-800 text-white hover:bg-red-600 hover:text-gray-800 px-6 py-4 rounded-lg text-lg"
           >
             Contact Me
           </a>
