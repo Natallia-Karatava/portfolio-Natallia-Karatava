@@ -10,7 +10,7 @@ const Carousel = () => {
     },
     {
       name: "Website for the artist",
-      image: "src/images/projects-img/website-for-the-artist.png",
+      image: "src/images/projects-img/website-for-the-artist-min.png",
       url: "https://helena-klaus.de/galerie/",
     },
     {
@@ -20,18 +20,18 @@ const Carousel = () => {
     },
 
     {
-      name: "Website for an IT company",
+      name: "Website for an IT company - design",
       image: "src/images/projects-img/website-for-an-it-company.png",
       url: "https://visutechsystem.by/en/",
     },
     {
       name: "Website concepts for a museum",
-      image: "src/images/projects-img/website-for-an-it-company.png",
+      image: "src/images/projects-img/online-museum.png",
       url: "https://www.behance.net/gallery/134427745/koncept-sajta-dlja-muzeja-abstrakcionizma",
     },
     {
       name: "App for event search - design",
-      image: "src/images/projects-img/website-for-an-it-company.png",
+      image: "src/images/projects-img/App-LAZY.png",
       url: "https://www.behance.net/gallery/134278605/koncept-mobilnogo-prilozhenija-dlja-poiska-sobytij",
     },
   ];
@@ -73,7 +73,7 @@ const Carousel = () => {
   return (
     <section
       id="projects"
-      className="bg-white text-gray-800 py-16 px-8 relative"
+      className="bg-white text-gray-800 py-16 px-8 relative scroll-mt-16"
     >
       <div className="relative w-full overflow-visible">
         <h2 className="text-4xl font-semibold text-center mb-8">My Projects</h2>
@@ -92,9 +92,7 @@ const Carousel = () => {
               <div
                 key={index}
                 className={`flex-shrink-0 transition-transform duration-500 ease-out ${
-                  index === 1
-                    ? "scale-100 opacity-100"
-                    : "scale-90 opacity-50 blur-s"
+                  index === 1 ? "scale-100 opacity-100" : "scale-90 opacity-50 "
                 } w-11/12 sm:w-9/12 md:w-1/3`}
                 style={{
                   transform:
@@ -108,8 +106,13 @@ const Carousel = () => {
                 <div className="rounded-lg overflow-hidden shadow-lg">
                   {/* Верхняя часть карточки — фон с изображением */}
                   <div
-                    className="min-h-[15rem] bg-cover bg-center"
-                    style={{ backgroundImage: `url(${project.image})` }}
+                    className="min-h-[15rem] bg-cover bg-center transition-all duration-500"
+                    style={{
+                      backgroundImage: `url(${project.image})`,
+                      backgroundSize: "cover", // Фиксируем размер
+                      backgroundPosition: "center", // Центрируем изображение
+                      filter: index === 1 ? "none" : "grayscale(100%)",
+                    }}
                   ></div>
                   {/* Нижняя белая плашка */}
                   <div className="bg-white p-4">

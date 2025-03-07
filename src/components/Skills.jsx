@@ -15,7 +15,7 @@ const Skills = () => {
   return (
     <section
       id="skills"
-      className="bg-gray-100 text-gray-800 py-10 text-center"
+      className="bg-gray-100 text-gray-800 py-10 text-center scroll-mt-16"
     >
       <h2 className="text-4xl font-semibold mb-12">My Skills</h2>
       <div className="flex justify-center gap-12 flex-wrap">

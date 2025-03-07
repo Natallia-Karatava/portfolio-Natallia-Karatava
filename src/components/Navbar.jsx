@@ -1,14 +1,22 @@
 const Navbar = () => {
+  const handleScroll = (e, id) => {
+    e.preventDefault();
+    document.getElementById(id)?.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  };
   return (
     <div>
       <nav
         id="navbar"
-        className="fixed w-full bg-white/80 backdrop-blur-md shadow-md transition-transform duration-300 transform-gpu z-50"
+        className=" fixed w-full bg-white/80 backdrop-blur-md shadow-md transition-transform duration-300 transform-gpu z-50"
       >
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
           {/* <!-- Logo --> */}
           <a
             href="#"
+            onClick={(e) => handleScroll(e, "top")}
             className="text-2xl font-bold text-gray-900 hover:text-red-600 transition-colors"
           >
             NK
@@ -17,13 +25,18 @@ const Navbar = () => {
           {/* <!-- Navigation Links --> */}
           <ul className="hidden md:flex space-x-6 text-gray-800 font-medium">
             <li>
-              <a href="#about" className="hover:text-red-600 transition-colors">
+              <a
+                href="#about"
+                onClick={(e) => handleScroll(e, "about")}
+                className="hover:text-red-600 transition-colors"
+              >
                 About
               </a>
             </li>
             <li>
               <a
                 href="#skills"
+                onClick={(e) => handleScroll(e, "skills")}
                 className="hover:text-red-600 transition-colors"
               >
                 Skills
@@ -32,13 +45,18 @@ const Navbar = () => {
             <li>
               <a
                 href="#projects"
+                onClick={(e) => handleScroll(e, "projects")}
                 className="hover:text-red-600 transition-colors"
               >
                 Projects
               </a>
             </li>
             <li>
-              <a href="#" className="hover:text-red-600 transition-colors">
+              <a
+                href="#contact"
+                onClick={(e) => handleScroll(e, "contact")}
+                className="hover:text-red-600 transition-colors"
+              >
                 Contact
               </a>
             </li>
@@ -71,7 +89,7 @@ const Navbar = () => {
           <ul className="space-y-4 p-4 text-gray-800 font-medium">
             <li>
               <a
-                href="#"
+                href="about"
                 className="block hover:text-red-500 transition-colors"
               >
                 About
@@ -79,7 +97,7 @@ const Navbar = () => {
             </li>
             <li>
               <a
-                href="#"
+                href="skills"
                 className="block hover:text-red-500 transition-colors"
               >
                 Skills
@@ -87,7 +105,7 @@ const Navbar = () => {
             </li>
             <li>
               <a
-                href="#"
+                href="projects"
                 className="block hover:text-red-500 transition-colors"
               >
                 Projects
@@ -95,7 +113,7 @@ const Navbar = () => {
             </li>
             <li>
               <a
-                href="#"
+                href="contact"
                 className="block hover:text-red-500 transition-colors"
               >
                 Contact

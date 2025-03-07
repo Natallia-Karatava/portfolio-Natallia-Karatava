@@ -12,7 +12,10 @@ import { FaMoneyBillTrendUp } from "react-icons/fa6";
 
 const About = () => {
   return (
-    <section id="about" className="bg-gray-100 text-gray-800 py-16 px-6">
+    <section
+      id="about"
+      className="bg-gray-100 text-gray-800 py-16 px-6 scroll-mt-16"
+    >
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-[50%_20%_50%] lg:grid-cols-[40%_16%_40%] gap-12 md:gap-16 lg:gap-20 items-center">
         {/* Left Section - About Text + Button */}
         <div className="flex flex-col justify-center text-center md:text-left">
@@ -23,7 +26,9 @@ const About = () => {
             up-to-date with the latest technologies.
           </p>
           <a
-            href="/cv.pdf"
+            href="src/images/CV-Karatava Natallia-DE.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
             className="bg-gray-800 text-white px-6 py-2 rounded-md shadow-md hover:bg-red-600 hover:text-gray-800 transition w-max self-start"
           >
             Look CV
