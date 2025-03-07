@@ -1,6 +1,9 @@
+import RedDotsGrid from "./RedDotsGrid";
+import RedDotTransform from "./RedDotTransform";
+
 const Hero = () => {
   return (
-    <div className="hero bg-white min-h-screen flex items-center justify-center">
+    <div className="relative hero bg-white min-h-screen flex items-center justify-center overflow-hidden">
       <div className="hero-content flex-col lg:flex-row-reverse lg:gap-32 w-full max-w-7xl px-6">
         <img
           src="src/images/NK-foto.png"
