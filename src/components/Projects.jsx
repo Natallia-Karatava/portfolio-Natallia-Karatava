@@ -88,7 +88,7 @@ const Carousel = () => {
           {/* Link button */}
           <button
             onClick={handlePrev}
-            className="hidden md:block absolute left-0 z-10 text-white bg-gray-800 hover:bg-red-600 hover:text-gray-800 p-3 rounded-full m-10"
+            className="absolute left-0 z-10 text-white bg-gray-800 hover:bg-red-600 hover:text-gray-800 p-3 rounded-full m-10"
           >
             <FaArrowLeft size={24} />
           </button>
@@ -135,7 +135,7 @@ const Carousel = () => {
           {/* Right button */}
           <button
             onClick={handleNext}
-            className=" hidden md:block absolute right-0 z-10 text-white bg-gray-800 p-3 hover:bg-red-600 hover:text-gray-800 rounded-full m-10"
+            className="absolute right-0 z-10 text-white bg-gray-800 p-3 hover:bg-red-600 hover:text-gray-800 rounded-full m-0"
           >
             <FaArrowRight size={24} />
           </button>
