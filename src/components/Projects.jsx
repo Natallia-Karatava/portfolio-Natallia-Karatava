@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
-const Carousel = ({ projects }) => {
+const Projects = ({ projects }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const handleNext = () => {
@@ -76,14 +76,9 @@ const Carousel = ({ projects }) => {
                       <h3 className="text-lg font-semibold text-gray-800 ml-2">
                         {project.name}
                       </h3>
-                      <a
-                        href={project.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="mt-2 inline-block text-gray-800  px-2 hover:text-red-600 transition duration-300"
-                      >
+                      <button className="mt-2 inline-block text-gray-800  px-2 hover:text-red-600 transition duration-300">
                         Go to view
-                      </a>
+                      </button>
                     </div>
                   </div>
                 </a>
@@ -104,4 +99,4 @@ const Carousel = ({ projects }) => {
   );
 };
 
-export default Carousel;
+export default Projects;

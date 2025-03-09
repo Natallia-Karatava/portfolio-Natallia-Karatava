@@ -5,7 +5,6 @@ import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Projects from "./components/Projects";
 import Skills from "./components/Skills";
-import RedDotsGrid from "./components/RedDotsGrid";
 import projects from "./projects-list";
 import ProjectMobile from "./components/ProjectMobile";
 

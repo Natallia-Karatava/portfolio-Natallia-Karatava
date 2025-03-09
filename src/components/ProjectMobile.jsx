@@ -25,14 +25,9 @@ const ProjectMobile = ({ projects }) => {
                   <h3 className="text-lg font-semibold text-gray-800">
                     {project.name}
                   </h3>
-                  <a
-                    href={project.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="mt-2 inline-block text-gray-800 px-2 hover:text-red-600 transition duration-300"
-                  >
+                  <button className="mt-2 inline-block text-gray-800 px-2 hover:text-red-600 transition duration-300">
                     Go to view
-                  </a>
+                  </button>
                 </div>
               </a>
             </div>
