@@ -6,6 +6,8 @@ import Header from "./components/Header";
 import Projects from "./components/Projects";
 import Skills from "./components/Skills";
 import RedDotsGrid from "./components/RedDotsGrid";
+import projects from "./projects-list";
+import ProjectMobile from "./components/ProjectMobile";
 
 function App() {
   return (
@@ -13,7 +15,15 @@ function App() {
       <Header />
       <About />
       <Skills />
-      <Projects />
+      {/* Decktop */}
+      <div className="hidden lg:block">
+        <Projects projects={projects} />
+      </div>
+      {/* Tablet and Mobile */}
+      <div className="block lg:hidden">
+        <ProjectMobile projects={projects} />
+      </div>
+
       <Contact />
       <Footer />
     </div>
