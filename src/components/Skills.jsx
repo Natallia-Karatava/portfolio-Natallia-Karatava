@@ -1,5 +1,3 @@
-// src/components/Skills.js
-import React from "react";
 import {
   FaJs,
   FaReact,

@@ -2,7 +2,7 @@ import { useState } from "react";
 import { FaBuromobelexperte } from "react-icons/fa6";
 
 const Navbar = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false); // Состояние для управления видимостью меню
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const handleScroll = (e, id) => {
     e.preventDefault();
@@ -87,7 +87,6 @@ const Navbar = () => {
           } bg-white shadow-md`}
         >
           <ul className="space-y-4 p-4 text-gray-800 font-medium text-right">
-            {/* Ссылки в мобильном меню */}
             <li>
               <a
                 href="#about"

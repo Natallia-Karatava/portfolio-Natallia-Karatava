@@ -1,4 +1,3 @@
-// src/components/About.js
 import React from "react";
 import { FaLinkedin, FaBehance, FaGithub, FaCode } from "react-icons/fa";
 import { IoLogoFigma } from "react-icons/io5";

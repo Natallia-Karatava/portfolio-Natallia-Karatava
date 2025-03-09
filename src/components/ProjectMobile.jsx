@@ -6,7 +6,7 @@ const ProjectMobile = ({ projects }) => {
     >
       <h2 className="text-4xl font-semibold text-center mb-8">My Projects</h2>
 
-      {/* Контейнер со скроллом */}
+      {/* Card scroll*/}
       <div className="overflow-x-auto whitespace-nowrap scrollbar-hide">
         <div className="flex gap-4">
           {projects.map((project, index) => (
@@ -15,12 +15,12 @@ const ProjectMobile = ({ projects }) => {
               className="flex-shrink-0 w-72 sm:w-80 md:w-96 rounded-lg overflow-hidden shadow-lg"
             >
               <a href={project.url} target="_blank" rel="noopener noreferrer">
-                {/* Картинка проекта */}
+                {/* Image*/}
                 <div
                   className="w-full h-48 bg-cover bg-center"
                   style={{ backgroundImage: `url(${project.image})` }}
                 ></div>
-                {/* Информация о проекте */}
+                {/* Info*/}
                 <div className="bg-white p-4">
                   <h3 className="text-lg font-semibold text-gray-800">
                     {project.name}

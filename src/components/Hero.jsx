@@ -1,5 +1,4 @@
 import RedDotsGrid from "./RedDotsGrid";
-import RedDotTransform from "./RedDotTransform";
 
 const Hero = () => {
   return (
