@@ -3,15 +3,16 @@ import RedDotTransform from "./RedDotTransform";
 
 const Hero = () => {
   return (
-    <div className="relative hero bg-white min-h-screen flex items-center justify-center overflow-hidden">
+    <div className="relative hero bg-white min-h-screen flex items-center justify-center overflow: visible">
       <div className="hero-content flex-col lg:flex-row-reverse lg:gap-32 w-full max-w-7xl px-6">
-        <div>
+        <div className="relative">
           <img
             src="src/images/NK-foto-blur.png"
             className="w-full max-w-md lg:max-w-lg h-auto rounded-lg"
             alt="Natallia"
           />
-          <div className="hidden md:block absolute top-122 right-18 -translate-x-1/2 z-10  pointer-events-none">
+
+          <div className="hidden lg:block absolute top-65 right-10 transform translate-x-1/2 translate-y-1/2 z-10 pointer-events-none">
             <RedDotsGrid />
           </div>
         </div>
