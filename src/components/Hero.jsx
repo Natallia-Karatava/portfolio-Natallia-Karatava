@@ -7,7 +7,7 @@ const Hero = () => {
       <div className="hero-content flex-col lg:flex-row-reverse lg:gap-32 w-full max-w-7xl px-6">
         <div>
           <img
-            src="src/images/NK-foto.png"
+            src="src/images/NK-foto-blur.png"
             className="w-full max-w-md lg:max-w-lg h-auto rounded-lg"
             alt="Natallia"
           />
