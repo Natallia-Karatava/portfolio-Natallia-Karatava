@@ -1,4 +1,5 @@
 import RedDotsGrid from "./RedDotsGrid";
+import NKfotoBlur from "../images/NK-foto-blur.png";
 
 const Hero = () => {
   return (
@@ -6,7 +7,7 @@ const Hero = () => {
       <div className="hero-content flex-col lg:flex-row-reverse lg:gap-32 w-full max-w-7xl px-6">
         <div className="relative">
           <img
-            src="src/images/NK-foto-blur.png"
+            src={NKfotoBlur}
             className="w-full max-w-md lg:max-w-lg h-auto rounded-lg"
             alt="Natallia"
           />

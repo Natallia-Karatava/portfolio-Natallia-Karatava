@@ -1,3 +1,4 @@
+import CVNatalliaKaratva from "../images/CV-Karatava Natallia-DE.pdf";
 const Contact = () => {
   return (
     <section
@@ -20,7 +21,7 @@ const Contact = () => {
           Contact Me
         </a>
         <a
-          href="src/images/CV-Karatava Natallia-DE.pdf"
+          href={CVNatalliaKaratva}
           target="_blank"
           rel="noopener noreferrer"
           className="bg-gray-200 text-gray-800 px-9 py-3 rounded-lg text-lg font-medium shadow-md hover:text-red-600 transition"

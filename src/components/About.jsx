@@ -2,6 +2,8 @@ import React from "react";
 import { FaLinkedin, FaBehance, FaGithub, FaCode } from "react-icons/fa";
 import { IoLogoFigma } from "react-icons/io5";
 import { FaMoneyBillTrendUp } from "react-icons/fa6";
+import NKfotoS from "../images/NK-foto-s.png";
+import CVNatalliaKaratva from "../images/CV-Karatava Natallia-DE.pdf";
 
 const About = () => {
   return (
@@ -19,7 +21,7 @@ const About = () => {
             up-to-date with the latest technologies.
           </p>
           <a
-            href="src/images/CV-Karatava Natallia-DE.pdf"
+            href={CVNatalliaKaratva}
             target="_blank"
             rel="noopener noreferrer"
             className="bg-gray-800 text-white px-6 py-2 rounded-md shadow-md hover:bg-red-600 hover:text-gray-800 transition w-max md:self-start self-center"
@@ -60,7 +62,7 @@ const About = () => {
           {/* Photo Placeholder */}
           <div className=" hidden md:block w-28 h-36 md:w-32 md:h-40 bg-gray-100 rounded-lg">
             <img
-              src="src/images/NK-foto-s.png"
+              src={NKfotoS}
               alt="foto-NK"
               className="rounded-lg w-full h-full object-cover"
             />
