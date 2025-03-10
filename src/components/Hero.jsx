@@ -1,6 +1,8 @@
 import RedDotsGrid from "./RedDotsGrid";
 import NKfotoBlur from "../images/NK-foto-blur.png";
 
+import RedDotsSquare from "./RedDotsSquare";
+
 const Hero = () => {
   return (
     <div className="relative hero bg-white min-h-screen flex items-center justify-center overflow: visible">
