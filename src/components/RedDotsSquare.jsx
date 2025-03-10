@@ -11,7 +11,7 @@ const RedDotsSquare = ({ isHovered }) => {
         style={{
           gridTemplateColumns: `repeat(${size}, minmax(0, 1fr))`,
           gap: "12px",
-          transform: "translateX(-210%)",
+          transform: "translateX(-220%)",
         }}
       >
         {[...Array(totalDots)].map((_, i) => {
