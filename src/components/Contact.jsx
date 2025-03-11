@@ -10,8 +10,7 @@ const Contact = () => {
       id="contact"
       className="relative flex flex-col items-center text-center py-16 px-6 bg-gray-100 text-gray-800 overflow-hidden"
     >
-      {/* Фоновые точки */}
-      <RedDotsSquare isHovered={isHovered} />
+      <RedDotsSquare className="hidden lg:block" isHovered={isHovered} />
 
       <h2 className="text-3xl md:text-4xl font-semibold mb-6 relative z-10">
         I'm glad you are interested in my work!
