@@ -107,8 +107,8 @@ const Navbar = () => {
             </li>
             <li>
               <a
-                href="#projects"
-                onClick={(e) => handleScroll(e, "projects")}
+                href="#projects-mobile"
+                onClick={(e) => handleScroll(e, "projects-mobile")}
                 className="block hover:text-red-500 transition-colors"
               >
                 Projects
