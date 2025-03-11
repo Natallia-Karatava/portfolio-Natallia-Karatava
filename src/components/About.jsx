@@ -72,17 +72,17 @@ const About = () => {
         {/* Right Section - Key Points */}
         <div className="flex flex-col gap-4 self-center md:self-end text-center md:text-left">
           <div className="flex items-center gap-3 justify-center md:justify-start">
-            <IoLogoFigma className="text-xl md:text-2xl text-gray-800" />
+            <IoLogoFigma className="text-2xl md:text-2xl text-gray-800" />
             <p className="text-lg">
               Trained and experienced as a UI/UX Designer
             </p>
           </div>
           <div className="flex items-center gap-3 justify-center md:justify-start">
-            <FaMoneyBillTrendUp className="text-xl md:text-2xl text-gray-800" />
+            <FaMoneyBillTrendUp className="text-2xl md:text-2xl text-gray-800" />
             <p className="text-lg">6+ years of experience in finance</p>
           </div>
           <div className="flex items-center gap-3 justify-center md:justify-start">
-            <FaCode className="text-xl md:text-2xl text-gray-800" />
+            <FaCode className="text-2xl md:text-2xl text-gray-800" />
             <p className="text-lg">Passionate about clean and optimized code</p>
           </div>
         </div>
