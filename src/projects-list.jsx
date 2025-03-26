@@ -5,7 +5,7 @@ import Websiteforitcompany from "./images/projects-img/website-for-it-company.pn
 import Onlinemuseum from "./images/projects-img/online-museum.png";
 import Applazy from "./images/projects-img/app-lazy.png";
 import Appcoffe from "./images/projects-img/app-coffe.png";
-import TodoList from "./src/images/projects-img/todo-list.png";
+import TodoList from "./images/projects-img/todo-list.png";
 
 const projects = [
   {
