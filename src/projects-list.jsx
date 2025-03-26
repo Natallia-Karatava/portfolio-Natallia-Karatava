@@ -5,6 +5,8 @@ import Websiteforitcompany from "./images/projects-img/website-for-it-company.pn
 import Onlinemuseum from "./images/projects-img/online-museum.png";
 import Applazy from "./images/projects-img/app-lazy.png";
 import Appcoffe from "./images/projects-img/app-coffe.png";
+import TodoList from "./src/images/projects-img/todo-list.png";
+
 const projects = [
   {
     name: "Website for the artist",
@@ -43,6 +45,11 @@ const projects = [
     name: "Coffee shop app - design",
     image: Appcoffe,
     url: "https://www.behance.net/gallery/133828119/koncept-mobilnogo-prilozhenija-dlja-kofejni",
+  },
+  {
+    name: "To-Do List",
+    image: TodoList,
+    url: "https://github.com/Natallia-Karatava/todo-list",
   },
 ];
 
