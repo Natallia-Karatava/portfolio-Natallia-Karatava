@@ -6,8 +6,14 @@ import Onlinemuseum from "./images/projects-img/online-museum.png";
 import Applazy from "./images/projects-img/app-lazy.png";
 import Appcoffe from "./images/projects-img/app-coffe.png";
 import TodoList from "./images/projects-img/todo-list.png";
+import RadioApp from "./images/projects-img/radio-app.png";
 
 const projects = [
+  {
+    name: "Online Radio",
+    image: RadioApp,
+    url: "https://radio-app-five.vercel.app/",
+  },
   {
     name: "Website for the artist",
     image: websiteForArtist,

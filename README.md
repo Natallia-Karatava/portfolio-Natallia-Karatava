@@ -1,4 +1,8 @@
-# This is a simple page for a portfolio while creating it used:
+# Portfolio Page
 
-1. Vite + React
-2. Tailwind for styling
+This is a simple portfolio page showcasing links to my various projects. Some of them are hosted on GitHub, while others are available on different platforms.
+
+### Technologies used:
+
+- Vite + React
+- Tailwind CSS for styling
