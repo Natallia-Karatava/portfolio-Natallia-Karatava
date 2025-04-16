@@ -1,5 +1,5 @@
 import { useState } from "react";
-import CVNatalliaKaratva from "../images/CV-Karatava Natallia-DE.pdf";
+import CVNatalliaKaratva from "../images/CV_Karatava_Natallia.pdf";
 import RedDotsSquare from "./RedDotsSquare";
 
 const Contact = () => {

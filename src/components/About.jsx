@@ -3,7 +3,7 @@ import { FaLinkedin, FaBehance, FaGithub, FaCode } from "react-icons/fa";
 import { IoLogoFigma } from "react-icons/io5";
 import { FaMoneyBillTrendUp } from "react-icons/fa6";
 import NKfotoS from "../images/NK-foto-s.png";
-import CVNatalliaKaratva from "../images/CV-Karatava Natallia-DE.pdf";
+import CVNatalliaKaratva from "../images/CV_Karatava_Natallia.pdf";
 
 const About = () => {
   return (
